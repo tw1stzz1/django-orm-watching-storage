@@ -10,8 +10,8 @@ DATABASES = {
         'HOST': env.str('DB_HOST'),
         'PORT': env.int('DB_PORT'),
         'NAME': env.str('DB_NAME'),
-        'USER': env.str('USER'),
-        'PASSWORD': env.str('PASSWORD'),
+        'USER': env.str('DB_USER'),
+        'PASSWORD': env.str('DB_PASSWORD'),
     }
 }
 
@@ -23,7 +23,7 @@ DEBUG = env.bool('DEBUG', False)
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = env.list('DB_ALLOWED_HOSTS')
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
